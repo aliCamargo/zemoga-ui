@@ -68,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    box-sizing: border-box;
 
     &__text {
       background-color: rgba(#333333, 0.5);
@@ -124,14 +125,8 @@
       align-items: center;
       justify-content: center;
       font-size: 40px;
-      cursor: pointer;
       color: #ffffff;
       border: none;
-
-      &:active,
-      &:focus {
-        outline: none;
-      }
 
       &--up {
         background-color: rgba(#1cbbb4, 0.9);
@@ -200,6 +195,29 @@
         font-weight: normal;
         margin-right: 10px;
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__head {
+    padding: 0 20px;
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__nav .menu > .item > a {
+      font-size: 14px;
+    }
+  }
+
+  .banner__more-info {
+    width: calc(100% - 40px);
+    margin: 71px 20px 0 20px;
+
+    .text-title {
+      font-size: 40px;
     }
   }
 }

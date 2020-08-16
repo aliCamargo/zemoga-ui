@@ -21,7 +21,7 @@
     flex-direction: column;
     align-items: center;
     margin-right: 25px;
-    width: 315px;
+    white-space: nowrap;
 
     .bold {
       font-size: 37.1px;
@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1 0 40%;
+    flex: 1 0 45%;
     height: 550px;
     margin: 20px;
     box-sizing: border-box;
@@ -114,44 +114,84 @@
     align-items: flex-end;
     font-weight: normal;
 
-    .greater-thumb {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      height: 30px;
-      width: 30px;
-      font-size: 15px;
-      margin: 0 10px 9px 0;
-
-      &--up {
-        background-color: #1cbbb4;
-      }
-
-      &--down {
-        background-color: #ffad1d;
-      }
-    }
-
     .title {
       margin: 0;
       font-size: 45px;
     }
   }
 
+  .greater-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    input:checked ~ .active-box {
+      border: solid 2px #ffffff;
+    }
+
+    .active-box {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &--left {
+      margin-bottom: 9px;
+      cursor: initial;
+    }
+
+    &--up {
+      background-color: #1cbbb4;
+    }
+
+    &--down {
+      background-color: #ffad1d;
+    }
+  }
+
+  .time-ago {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12.01px;
+    margin-left: 40px;
+
+    span:first-child {
+      font-weight: bold;
+      margin-right: 3px;
+    }
+  }
+
   .text-details {
     font-size: 16px;
     font-weight: lighter;
+    min-height: 36px;
     margin: 12px 21px 0 40px;
   }
 
   .actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 21px 21px 32px 40px;
 
-    .view-full-report {
+    .vote-btn {
       font-size: 14px;
       font-weight: normal;
       cursor: pointer;
@@ -159,18 +199,7 @@
       text-decoration: none;
       padding: 13px 24px;
       border: 1px solid #ffffff;
-    }
-
-    .time-ago {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 12.01px;
-
-      span:first-child {
-        font-weight: bold;
-      }
+      background: none;
     }
   }
 }
@@ -220,7 +249,7 @@
   justify-content: space-between;
   padding: 15px 27px 15px 35px;
   margin: 33px 0 39px;
-  height: 80px;
+  min-height: 80px;
   background-image: url('../images/people.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -253,5 +282,44 @@
     z-index: 2;
     background: none;
     border: 2px solid #333333;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 33px 20px 38px 20px;
+  }
+
+  .message {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__title {
+      width: 100%;
+    }
+  }
+
+  .gallery {
+    margin: -10px;
+
+    &__item {
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 0 90%;
+      height: 550px;
+      margin: 10px;
+    }
+  }
+
+  .submit-name {
+    &__text {
+      font-size: 20px;
+    }
+
+    &__btn {
+      font-size: 14px;
+    }
   }
 }
