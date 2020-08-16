@@ -1,12 +1,13 @@
 import { TestBed, async } from '@angular/core/testing';
+
+import { BannerModule, BodyModule, FooterModule } from './components/intex';
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
+describe('app.component.ts', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
+      imports: [BannerModule, BodyModule, FooterModule]
     }).compileComponents();
   }));
 
@@ -16,16 +17,37 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-app'`, () => {
+  it(`should have as title 'Zemoga UI'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-app');
+    expect(app.title).toEqual('Zemoga UI');
   });
 
-  it('should render title', () => {
+  it('should render <app-banner>', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-app app is running!');
+
+    expect(compiled.querySelector('app-banner').textContent).toContain('');
+  });
+
+  it('should render <app-body>', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+
+    expect(compiled.querySelector('section.container').innerHTML).toContain(
+      '<app-body'
+    );
+  });
+
+  it('should render <app-footer>', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+
+    expect(compiled.querySelector('section.container').innerHTML).toContain(
+      '<app-footer'
+    );
   });
 });

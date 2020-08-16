@@ -1,16 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { VotesComponent } from './votes.component';
 
-describe('VotesComponent', () => {
+describe('votes.component.ts', () => {
   let component: VotesComponent;
   let fixture: ComponentFixture<VotesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VotesComponent ]
-    })
-    .compileComponents();
+      declarations: [VotesComponent],
+      imports: [HttpClientModule, ReactiveFormsModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

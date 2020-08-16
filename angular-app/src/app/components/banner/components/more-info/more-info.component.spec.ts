@@ -2,15 +2,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MoreInfoComponent } from './more-info.component';
 
-describe('MoreInfoComponent', () => {
+describe('more-info.component.ts', () => {
   let component: MoreInfoComponent;
   let fixture: ComponentFixture<MoreInfoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoreInfoComponent ]
-    })
-    .compileComponents();
+      declarations: [MoreInfoComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

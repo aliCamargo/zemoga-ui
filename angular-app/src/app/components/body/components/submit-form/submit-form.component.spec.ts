@@ -2,15 +2,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SubmitFormComponent } from './submit-form.component';
 
-describe('SubmitFormComponent', () => {
+describe('submit-form.component.ts', () => {
   let component: SubmitFormComponent;
   let fixture: ComponentFixture<SubmitFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubmitFormComponent ]
-    })
-    .compileComponents();
+      declarations: [SubmitFormComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
