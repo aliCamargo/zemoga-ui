@@ -1,0 +1,257 @@
+.container {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 33px 123px 38px 133px;
+}
+
+.message {
+  display: flex;
+  width: 100%;
+  padding: 23px 25px 23px 27px;
+  color: #333333;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #ebebeb;
+
+  &__title {
+    font-size: 21.71px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 25px;
+    width: 315px;
+
+    .bold {
+      font-size: 37.1px;
+      font-weight: bold;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  &__close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.previous-rulling {
+  &__title {
+    margin: 38px 0 40px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 0 40%;
+    height: 550px;
+    margin: 20px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:nth-child(1) {
+      background-image: url('../images/kanye-west.jpg');
+    }
+
+    &:nth-child(2) {
+      background-image: url('../images/mark-zuckerberg.jpg');
+    }
+
+    &:nth-child(3) {
+      background-image: url('../images/cristina-fernandez-de-kirchner.jpg');
+    }
+
+    &:nth-child(4) {
+      background-image: url('../images/malala-yousafzai.jpg');
+    }
+  }
+}
+
+.item-container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.description-container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 2;
+  color: #ffffff;
+
+  .text-title {
+    display: flex;
+    align-items: flex-end;
+    font-weight: normal;
+
+    .greater-thumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      height: 30px;
+      width: 30px;
+      font-size: 15px;
+      margin: 0 10px 9px 0;
+
+      &--up {
+        background-color: #1cbbb4;
+      }
+
+      &--down {
+        background-color: #ffad1d;
+      }
+    }
+
+    .title {
+      margin: 0;
+      font-size: 45px;
+    }
+  }
+
+  .text-details {
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 12px 21px 0 40px;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 21px 21px 32px 40px;
+
+    .view-full-report {
+      font-size: 14px;
+      font-weight: normal;
+      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 24px;
+      border: 1px solid #ffffff;
+    }
+
+    .time-ago {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 12.01px;
+
+      span:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.bar-container {
+  display: flex;
+  height: 49px;
+  align-items: stretch;
+
+  .bar {
+    display: flex;
+    color: #ffffff;
+    padding: 10px;
+    align-items: center;
+    font-size: 29.14px;
+
+    span {
+      display: flex;
+      align-items: flex-end;
+      justify-items: center;
+      font-weight: lighter;
+      margin: 0 9px;
+
+      .percentage {
+        font-size: 20px;
+      }
+    }
+
+    &--up {
+      background-color: rgba(#1cbbb4, 0.7);
+    }
+
+    &--down {
+      background-color: rgba(#ffad1d, 0.7);
+      justify-content: flex-end;
+
+      .fa-thumbs-down {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}
+
+.submit-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 27px 15px 35px;
+  margin: 33px 0 39px;
+  height: 80px;
+  background-image: url('../images/people.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    display: flex;
+    background-color: rgba(#ffffff, 0.85);
+    z-index: 1;
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: lighter;
+    color: #333333;
+    z-index: 2;
+  }
+
+  &__btn {
+    padding: 10px 35px;
+    font-size: 20px;
+    color: #333333;
+    z-index: 2;
+    background: none;
+    border: 2px solid #333333;
+  }
+}

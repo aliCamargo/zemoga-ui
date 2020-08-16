@@ -1,15 +1,306 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8" />
+    <title>Zemoga UI</title>
   </head>
 
   <body>
-    <h1> <%= htmlWebpackPlugin.options.myPageHeader %> </h1>
-    <h3>Welcome to the Awesome application</h3>
+    <header class="banner">
+      <div class="banner__head">
+        <h1 class="banner__head__title">Rule of Thumb.</h1>
+        <nav class="banner__head__nav">
+          <ul class="menu">
+            <li class="item"><a href="#">Past Trials</a></li>
+            <li class="item"><a href="#">How It Works</a></li>
+            <li class="item"><a href="#">Log In/Sign Up</a></li>
+            <li class="item">
+              <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-    <my-app></my-app>
+      <div class="banner__more-info">
+        <div class="banner__more-info__text">
+          <span class="text-small">
+            What’s your opinion on
+          </span>
 
+          <h1 class="text-title">Pope Francis?</h1>
+
+          <p class="text-paragraph">
+            He’s talking tough on clergy sexual abuse, but is he just another
+            papal pervert protector? (thumbs down) or a true pedophile punishing
+            pontiff? (thumbs up)
+          </p>
+
+          <a href="#" class="text-link">
+            <i class="fab fa-wikipedia-w"></i>
+            More information
+          </a>
+
+          <span class="text-bold">
+            What’s Your Verdict?
+          </span>
+        </div>
+        <div class="banner__more-info__thumbs">
+          <button type="button" class="thumb thumb--up">
+            <i class="fas fa-thumbs-up"></i>
+          </button>
+          <button type="button" class="thumb thumb--down">
+            <i class="fas fa-thumbs-down"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="banner__closing">
+        <div class="banner__closing__text">Closing in</div>
+        <div class="banner__closing__days">
+          <span class="number">22</span> days
+        </div>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="message">
+        <div class="message__title">
+          <span>Speak out. Be heard.</span>
+          <span class="bold">Be counted</span>
+        </div>
+        <div class="message__text">
+          Rule of Thumb is a crowd sourced court of public opinion where anyone
+          and everyone can speak out and speak freely. It’s easy: You share your
+          opinion, we analyze and put the data in a public report.
+        </div>
+        <button type="button" class="message__close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="previous-rulling">
+        <h1 class="previous-rulling__title">
+          Previous Rulings
+        </h1>
+
+        <div class="gallery">
+          <div class="gallery__item">
+            <div class="item-container">
+              <div class="description-container">
+                <div class="text-title">
+                  <button class="greater-thumb greater-thumb--up">
+                    <i class="fas fa-thumbs-up"></i>
+                  </button>
+                  <h1 class="title">Kanye West</h1>
+                </div>
+
+                <div class="text-details">
+                  Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
+                  Aenean eu velit libero.
+                </div>
+
+                <div class="actions">
+                  <a href="#" class="view-full-report">View Full Report</a>
+                  <span class="time-ago">
+                    <span>1 month ago</span>
+                    <span>in Entertainment</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="bar-container">
+                <div class="bar bar--up" style="width: 64%;">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span>
+                    64
+                    <div class="percentage">%</div>
+                  </span>
+                </div>
+
+                <div class="bar bar--down" style="width: 36%;">
+                  <span>
+                    36
+                    <div class="percentage">%</div>
+                  </span>
+                  <i class="fas fa-thumbs-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__item">
+            <div class="item-container">
+              <div class="description-container">
+                <div class="text-title">
+                  <button class="greater-thumb greater-thumb--down">
+                    <i class="fas fa-thumbs-down"></i>
+                  </button>
+                  <h1 class="title">Mark Zuckerberg</h1>
+                </div>
+
+                <div class="text-details">
+                  Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
+                  Aenean eu velit libero.
+                </div>
+
+                <div class="actions">
+                  <a href="#" class="view-full-report">View Full Report</a>
+                  <span class="time-ago">
+                    <span>1 month ago</span>
+                    <span>in Entertainment</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="bar-container">
+                <div class="bar bar--up" style="width: 36%;">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span>
+                    36
+                    <div class="percentage">%</div>
+                  </span>
+                </div>
+
+                <div class="bar bar--down" style="width: 64%;">
+                  <span>
+                    64
+                    <div class="percentage">%</div>
+                  </span>
+                  <i class="fas fa-thumbs-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__item">
+            <div class="item-container">
+              <div class="description-container">
+                <div class="text-title">
+                  <button class="greater-thumb greater-thumb--down">
+                    <i class="fas fa-thumbs-down"></i>
+                  </button>
+                  <h1 class="title">Cristina Fernández de Kirchner</h1>
+                </div>
+
+                <div class="text-details">
+                  Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
+                  Aenean eu velit libero.
+                </div>
+
+                <div class="actions">
+                  <a href="#" class="view-full-report">View Full Report</a>
+                  <span class="time-ago">
+                    <span>1 month ago</span>
+                    <span>in Entertainment</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="bar-container">
+                <div class="bar bar--up" style="width: 36%;">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span>
+                    36
+                    <div class="percentage">%</div>
+                  </span>
+                </div>
+
+                <div class="bar bar--down" style="width: 64%;">
+                  <span>
+                    64
+                    <div class="percentage">%</div>
+                  </span>
+                  <i class="fas fa-thumbs-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__item">
+            <div class="item-container">
+              <div class="description-container">
+                <div class="text-title">
+                  <button class="greater-thumb greater-thumb--up">
+                    <i class="fas fa-thumbs-up"></i>
+                  </button>
+                  <h1 class="title">Malala Yousafzai</h1>
+                </div>
+
+                <div class="text-details">
+                  Vestibulum diam ante, porttitor a odio eget, rhoncus neque.
+                  Aenean eu velit libero.
+                </div>
+
+                <div class="actions">
+                  <a href="#" class="view-full-report">View Full Report</a>
+                  <span class="time-ago">
+                    <span>1 month ago</span>
+                    <span>in Entertainment</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="bar-container">
+                <div class="bar bar--up" style="width: 64%;">
+                  <i class="fas fa-thumbs-up"></i>
+                  <span>
+                    64
+                    <div class="percentage">%</div>
+                  </span>
+                </div>
+
+                <div class="bar bar--down" style="width: 36%;">
+                  <span>
+                    36
+                    <div class="percentage">%</div>
+                  </span>
+                  <i class="fas fa-thumbs-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="submit-name">
+        <div class="submit-name__text">
+          Is there anyone else you would want us to add?
+        </div>
+
+        <button type="button" class="submit-name__btn">
+          Submit a Name
+        </div>
+      </div>
+
+      <footer class="footer">
+        <nav class="foot-menu">
+          <ul class="menu">
+            <li class="item">
+              <a href="#">Terms and Conditions</a>
+            </li>
+            <li class="item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="social-menu">
+          <ul class="menu">
+            <li class="item">
+              Follow Us
+            </li>
+            <li class="item">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li class="item">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
   </body>
 </html>

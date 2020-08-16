@@ -1,7 +1,21 @@
 @import './normalize.min.css';
 @import './font-faces';
 
-body {
-    font-family: 'Lato';
-
+.custom-class {
+  min-height: 100vh;
+  background: rgb(94, 0, 58);
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+body {
+  font-family: 'Lato';
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+@import './shared';
+@import './banner';
+@import './container';
+@import './footer';
