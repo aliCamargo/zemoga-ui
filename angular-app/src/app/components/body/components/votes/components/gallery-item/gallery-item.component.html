@@ -13,14 +13,14 @@
             'greater-thumb--down': downPercentage > upPercentage
           }"
         >
-          <i
-            class="fas"
-            [ngClass]="{
-              'fa-thumbs-up': upPercentage > downPercentage,
-              'fa-thumbs-down': downPercentage > upPercentage
-            }"
-          ></i>
+          <ng-contentainer *ngIf="downPercentage > upPercentage">
+            <i class="fas fa-thumbs-down"></i>
+          </ng-contentainer>
+          <ng-contentainer *ngIf="upPercentage > downPercentage">
+            <i class="fas fa-thumbs-up"></i>
+          </ng-contentainer>
         </button>
+
         <h1 class="title">{{ candidate.name }}</h1>
       </div>
 
@@ -33,22 +33,43 @@
         {{ candidate.description }}
       </div>
 
-      <div *ngIf="true" class="actions">
+      <div *ngIf="isAbleToVote" class="actions" [formGroup]="voteForm">
         <label class="greater-thumb greater-thumb--up">
           <i class="fas fa-thumbs-up"></i>
-          <input name="radio-1" type="radio" />
+          <input
+            name="actionVote"
+            type="radio"
+            formControlName="actionVote"
+            value="up"
+          />
           <div class="active-box"></div>
         </label>
+
         <label class="greater-thumb greater-thumb--down">
           <i class="fas fa-thumbs-down"></i>
-          <input name="radio-1" type="radio" />
+          <input
+            name="actionVote"
+            type="radio"
+            formControlName="actionVote"
+            value="down"
+          />
           <div class="active-box"></div>
         </label>
-        <button type="button" class="vote-btn">Vote now</button>
+
+        <button
+          type="button"
+          class="vote-btn"
+          (click)="vote()"
+          [disabled]="actionVote.invalid"
+        >
+          Vote now
+        </button>
       </div>
 
-      <div *ngIf="false" class="actions">
-        <button type="button" class="vote-btn">Vote again</button>
+      <div *ngIf="!isAbleToVote" class="actions">
+        <button type="button" class="vote-btn" (click)="enableVote()">
+          Vote again
+        </button>
       </div>
     </div>
 
@@ -56,14 +77,14 @@
       <div class="bar bar--up" [ngStyle]="{ 'width.%': upPercentage }">
         <i class="fas fa-thumbs-up"></i>
         <span>
-          {{ upPercentage }}
+          {{ upPercentage | number: '1.0-0' }}
           <div class="percentage">%</div>
         </span>
       </div>
 
       <div class="bar bar--down" [ngStyle]="{ 'width.%': downPercentage }">
         <span>
-          {{ downPercentage }}
+          {{ downPercentage | number: '1.0-0' }}
           <div class="percentage">%</div>
         </span>
         <i class="fas fa-thumbs-down"></i>

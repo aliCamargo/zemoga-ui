@@ -10,89 +10,6 @@
   background-size: cover;
 }
 
-.greater-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  height: 30px;
-  width: 30px;
-  font-size: 15px;
-  margin-right: 10px;
-  position: relative;
-  cursor: pointer;
-
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  input:checked ~ .active-box {
-    border: solid 2px #ffffff;
-  }
-
-  .active-box {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  &--left {
-    margin-bottom: 9px;
-    cursor: initial;
-  }
-
-  &--up {
-    background-color: #1cbbb4;
-  }
-
-  &--down {
-    background-color: #ffad1d;
-  }
-}
-
-.time-ago {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 12.01px;
-  margin-left: 40px;
-
-  span:first-child {
-    font-weight: bold;
-    margin-right: 3px;
-  }
-}
-
-.text-details {
-  font-size: 16px;
-  font-weight: lighter;
-  min-height: 36px;
-  margin: 12px 21px 0 40px;
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  margin: 21px 21px 32px 40px;
-
-  .vote-btn {
-    font-size: 14px;
-    font-weight: normal;
-    cursor: pointer;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 13px 24px;
-    border: 1px solid #ffffff;
-    background: none;
-  }
-}
-
 .item-container {
   display: flex;
   align-items: stretch;
@@ -204,6 +121,10 @@
       padding: 13px 24px;
       border: 1px solid #ffffff;
       background: none;
+
+      &:disabled {
+        opacity: 0.6;
+      }
     }
   }
 }
