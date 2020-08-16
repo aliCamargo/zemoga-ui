@@ -1,0 +1,248 @@
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 45%;
+  height: 550px;
+  margin: 20px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.greater-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .active-box {
+    border: solid 2px #ffffff;
+  }
+
+  .active-box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &--left {
+    margin-bottom: 9px;
+    cursor: initial;
+  }
+
+  &--up {
+    background-color: #1cbbb4;
+  }
+
+  &--down {
+    background-color: #ffad1d;
+  }
+}
+
+.time-ago {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 12.01px;
+  margin-left: 40px;
+
+  span:first-child {
+    font-weight: bold;
+    margin-right: 3px;
+  }
+}
+
+.text-details {
+  font-size: 16px;
+  font-weight: lighter;
+  min-height: 36px;
+  margin: 12px 21px 0 40px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin: 21px 21px 32px 40px;
+
+  .vote-btn {
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 24px;
+    border: 1px solid #ffffff;
+    background: none;
+  }
+}
+
+.item-container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.description-container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 2;
+  color: #ffffff;
+
+  .text-title {
+    display: flex;
+    align-items: flex-end;
+    font-weight: normal;
+
+    .title {
+      margin: 0;
+      font-size: 45px;
+    }
+  }
+
+  .greater-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    input:checked ~ .active-box {
+      border: solid 2px #ffffff;
+    }
+
+    .active-box {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &--left {
+      margin-bottom: 9px;
+      cursor: initial;
+    }
+
+    &--up {
+      background-color: #1cbbb4;
+    }
+
+    &--down {
+      background-color: #ffad1d;
+    }
+  }
+
+  .time-ago {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12.01px;
+    margin-left: 40px;
+
+    span:first-child {
+      font-weight: bold;
+      margin-right: 3px;
+    }
+  }
+
+  .text-details {
+    font-size: 16px;
+    font-weight: lighter;
+    min-height: 36px;
+    margin: 12px 21px 0 40px;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    margin: 21px 21px 32px 40px;
+
+    .vote-btn {
+      font-size: 14px;
+      font-weight: normal;
+      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 13px 24px;
+      border: 1px solid #ffffff;
+      background: none;
+    }
+  }
+}
+
+.bar-container {
+  display: flex;
+  height: 49px;
+  align-items: stretch;
+
+  .bar {
+    display: flex;
+    color: #ffffff;
+    padding: 10px;
+    align-items: center;
+    font-size: 29.14px;
+
+    span {
+      display: flex;
+      align-items: flex-end;
+      justify-items: center;
+      font-weight: lighter;
+      margin: 0 9px;
+
+      .percentage {
+        font-size: 20px;
+      }
+    }
+
+    &--up {
+      background-color: rgba(#1cbbb4, 0.7);
+    }
+
+    &--down {
+      background-color: rgba(#ffad1d, 0.7);
+      justify-content: flex-end;
+
+      .fa-thumbs-down {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}

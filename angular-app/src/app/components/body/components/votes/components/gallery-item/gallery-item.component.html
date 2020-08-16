@@ -1,0 +1,73 @@
+<div
+  *ngIf="candidate"
+  class="gallery-item"
+  [style.background-image]="profilePicture"
+>
+  <div class="item-container">
+    <div class="description-container">
+      <div class="text-title">
+        <button
+          class="greater-thumb greater-thumb--left"
+          [ngClass]="{
+            'greater-thumb--up': upPercentage > downPercentage,
+            'greater-thumb--down': downPercentage > upPercentage
+          }"
+        >
+          <i
+            class="fas"
+            [ngClass]="{
+              'fa-thumbs-up': upPercentage > downPercentage,
+              'fa-thumbs-down': downPercentage > upPercentage
+            }"
+          ></i>
+        </button>
+        <h1 class="title">{{ candidate.name }}</h1>
+      </div>
+
+      <span class="time-ago">
+        <span>{{ candidate.time_ago }} ago</span>
+        <span>in {{ candidate.industry }}</span>
+      </span>
+
+      <div class="text-details">
+        {{ candidate.description }}
+      </div>
+
+      <div *ngIf="true" class="actions">
+        <label class="greater-thumb greater-thumb--up">
+          <i class="fas fa-thumbs-up"></i>
+          <input name="radio-1" type="radio" />
+          <div class="active-box"></div>
+        </label>
+        <label class="greater-thumb greater-thumb--down">
+          <i class="fas fa-thumbs-down"></i>
+          <input name="radio-1" type="radio" />
+          <div class="active-box"></div>
+        </label>
+        <button type="button" class="vote-btn">Vote now</button>
+      </div>
+
+      <div *ngIf="false" class="actions">
+        <button type="button" class="vote-btn">Vote again</button>
+      </div>
+    </div>
+
+    <div class="bar-container">
+      <div class="bar bar--up" [ngStyle]="{ 'width.%': upPercentage }">
+        <i class="fas fa-thumbs-up"></i>
+        <span>
+          {{ upPercentage }}
+          <div class="percentage">%</div>
+        </span>
+      </div>
+
+      <div class="bar bar--down" [ngStyle]="{ 'width.%': downPercentage }">
+        <span>
+          {{ downPercentage }}
+          <div class="percentage">%</div>
+        </span>
+        <i class="fas fa-thumbs-down"></i>
+      </div>
+    </div>
+  </div>
+</div>

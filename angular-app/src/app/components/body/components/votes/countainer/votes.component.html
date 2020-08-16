@@ -1,0 +1,12 @@
+<div class="previous-rulling">
+  <h1 class="previous-rulling__title">
+    Votes
+  </h1>
+
+  <div class="gallery">
+    <app-gallery-item
+      *ngFor="let candidate of candidates"
+      [candidate]="candidate"
+    ></app-gallery-item>
+  </div>
+</div>

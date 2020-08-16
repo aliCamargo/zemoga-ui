@@ -1,0 +1,55 @@
+.message {
+  display: flex;
+  width: 100%;
+  padding: 23px 25px 23px 27px;
+  color: #333333;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #ebebeb;
+
+  &__title {
+    font-size: 21.71px;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 25px;
+    white-space: nowrap;
+
+    .bold {
+      font-size: 37.1px;
+      font-weight: bold;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  &__close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .message {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__title {
+      width: 100%;
+    }
+  }
+}

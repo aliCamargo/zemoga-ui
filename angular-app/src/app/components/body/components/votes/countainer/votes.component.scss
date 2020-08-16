@@ -1,0 +1,30 @@
+.previous-rulling {
+  &__title {
+    margin: 38px 0 40px;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px;
+
+  app-gallery-item {
+    display: flex;
+    flex: 1 0 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    margin: -10px;
+
+    &__item {
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 0 90%;
+      height: 550px;
+      margin: 10px;
+    }
+  }
+}
