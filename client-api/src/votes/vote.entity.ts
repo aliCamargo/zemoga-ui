@@ -8,7 +8,7 @@ import {
   JoinColumn
 } from 'typeorm';
 import { VoteType } from 'src/core/enumerations';
-import { User } from 'src/users';
+import { User } from 'src/users/user.entity';
 
 @Entity()
 export class Vote {

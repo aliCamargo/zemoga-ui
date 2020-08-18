@@ -7,8 +7,7 @@ import { UserDto } from './user.dto';
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(User)
-    private _usersRepository: Repository<User>
+    @InjectRepository(User) private readonly _usersRepository: Repository<User>
   ) {}
 
   async showAll(): Promise<User[]> {

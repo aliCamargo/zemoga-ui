@@ -57,6 +57,11 @@
     "typescript": "^3.7.4"
   },
   "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "./"
+    ],
     "moduleFileExtensions": [
       "js",
       "json",

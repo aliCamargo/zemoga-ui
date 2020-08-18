@@ -6,9 +6,9 @@ import {
   UpdateDateColumn,
   OneToMany
 } from 'typeorm';
+import { Exclude } from 'class-transformer';
 import { MarriageStatus } from 'src/core/enumerations';
 import { Vote } from 'src/votes/vote.entity';
-import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User {

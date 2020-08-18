@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { UsersModule } from 'src/users/users.module';
 import { VotesService } from './votes.service';
 import { VotesController } from './votes.controller';
-import { UsersModule } from 'src/users';
-
 import { Vote } from './vote.entity';
 
 @Module({
