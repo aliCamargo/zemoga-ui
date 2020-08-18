@@ -1,0 +1,7 @@
+{
+  "type": "sqlite",
+  "database": "./sqlite/zemoda.db",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "autoLoadEntities": true,
+  "synchronize": false
+}
