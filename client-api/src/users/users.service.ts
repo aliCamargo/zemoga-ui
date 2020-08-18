@@ -25,6 +25,17 @@ export class UsersService {
     return this._usersRepository.findOne(id, { relations: ['votes'] });
   }
 
+  async findByUsername(username: string): Promise<User> {
+    return this._usersRepository.findOne(
+      {
+        username: username
+      },
+      {
+        relations: ['votes']
+      }
+    );
+  }
+
   async update(id: number, data: Partial<UserDto>): Promise<User> {
     await this._usersRepository.update(id, data);
 

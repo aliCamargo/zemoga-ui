@@ -4,7 +4,9 @@
   "scripts": {
     "api": "json-server api/db.json --watch --routes api/routes.json --no-cors=true",
     "ng": "ng",
+    "heroku-postbuild": "ng build --configuration=production",
     "start": "ng serve",
+    "start:prod": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

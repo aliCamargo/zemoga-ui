@@ -20,7 +20,6 @@ export class User {
   id: number;
 
   @Column({ unique: true })
-  @Exclude()
   username: string;
 
   @Column()

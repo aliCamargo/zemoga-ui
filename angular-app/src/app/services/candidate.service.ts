@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { ICandidate } from '../interfaces/index';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class CandidateService {
   public async getCandidates(): Promise<ICandidate[]> {
     try {
       return await this._httpClient
-        .get<ICandidate[]>('api/candidates')
+        .get<ICandidate[]>(`${environment.api_host}/candidates`)
         .toPromise();
     } catch (e) {
       console.warn(e);
